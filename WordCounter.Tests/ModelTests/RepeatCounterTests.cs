@@ -54,5 +54,47 @@ namespace WordCounter.Tests
       RepeatCounter testRepeatCounter = new RepeatCounter();
       Assert.AreEqual(0, testRepeatCounter.Count("I am going to the cathedral", "cat"));
     }
+
+    [TestMethod]
+    public void TestBlankSentenceAndBlankWord()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(false, testRepeatCounter.IsAlphabetical("", ""));
+    }
+
+    [TestMethod]
+    public void TestBlankWord()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(false, testRepeatCounter.IsAlphabetical("This is a sentence", ""));
+    }
+
+    [TestMethod]
+    public void TestBlankSentence()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(false, testRepeatCounter.IsAlphabetical("", "Test"));
+    }
+
+    [TestMethod]
+    public void CountBlankSentenceAndBlankWord()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("", ""));
+    }
+
+    [TestMethod]
+    public void CountBlankWord()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("This is a sentence", ""));
+    }
+
+    [TestMethod]
+    public void CountBlankSentence()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("", "Test"));
+    }
   }
 }

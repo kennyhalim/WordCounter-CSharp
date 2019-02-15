@@ -7,6 +7,9 @@ namespace WordCounter
   {
     public bool IsAlphabetical(string sentence, string word)
     {
+      if(string.IsNullOrEmpty(sentence) || string.IsNullOrEmpty(word)){
+        return false;
+      }
       string sentenceWord = sentence + ' ' + word;
       foreach (char c in sentenceWord)
       {
