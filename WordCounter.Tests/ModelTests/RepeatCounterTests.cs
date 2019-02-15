@@ -33,5 +33,19 @@ namespace WordCounter.Tests
       RepeatCounter testRepeatCounter = new RepeatCounter();
       Assert.AreEqual(1, testRepeatCounter.Count("I am going to eat after this class", "eat"));
     }
+
+    [TestMethod]
+    public void CountTestInSentence()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(3, testRepeatCounter.Count("This is a test to test the test method is working", "test"));
+    }
+
+    [TestMethod]
+    public void CountTestInInvalidSentence()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("This is a test! to test the test method is working", "test"));
+    }
   }
 }
