@@ -13,7 +13,7 @@ namespace WordCounter
       string sentenceWord = sentence + ' ' + word;
       foreach (char c in sentenceWord)
       {
-        if (!Char.IsLetterOrDigit(c) && c != ' ')
+        if (!Char.IsLetterOrDigit(c) && c != ' ') //Only allow alphabets, numbers and space (No Punctuation)
           return false;
       }
       return true;
@@ -24,7 +24,7 @@ namespace WordCounter
       string[] wordsInSentence = sentence.Split(' ');
       if(IsAlphabetical(sentence, word)){
         for(int i = 0; i < wordsInSentence.Length; i++){
-          if(word == wordsInSentence[i]){
+          if(word.ToLower() == wordsInSentence[i].ToLower()){
             counter++;
           }
         }

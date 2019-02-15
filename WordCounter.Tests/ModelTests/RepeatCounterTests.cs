@@ -21,6 +21,20 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
+    public void TestOneWordAndOneSentence_False()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("apple", "orange"));
+    }
+
+    [TestMethod]
+    public void TestOneWordAndOneSentence_True()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(1, testRepeatCounter.Count("apple", "apple"));
+    }
+
+    [TestMethod]
     public void IsEatInSentence_False()
     {
       RepeatCounter testRepeatCounter = new RepeatCounter();
@@ -95,6 +109,20 @@ namespace WordCounter.Tests
     {
       RepeatCounter testRepeatCounter = new RepeatCounter();
       Assert.AreEqual(0, testRepeatCounter.Count("", "Test"));
+    }
+
+    [TestMethod]
+    public void CountUppercaseSentenceAndLowerCaseWord()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(1, testRepeatCounter.Count("I am going to France next year", "france"));
+    }
+
+    [TestMethod]
+    public void CountLowerCaseSentenceAndUpperCaseWord()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("I am going to eat some bananas", "Bananas"));
     }
   }
 }
