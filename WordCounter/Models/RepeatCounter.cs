@@ -17,7 +17,16 @@ namespace WordCounter
     }
 
     public int Count(string sentence, string word){
-      
+      int counter = 0;
+      string[] wordsInSentence = sentence.Split(' ');
+      if(IsAlphabetical(sentence, word)){
+        for(int i = 0; i < wordsInSentence.Length; i++){
+          if(word == wordsInSentence[i]){
+            counter++;
+          }
+        }
+      }
+      return counter;
     }
   }
 }
