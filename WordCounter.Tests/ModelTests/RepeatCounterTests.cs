@@ -47,5 +47,12 @@ namespace WordCounter.Tests
       RepeatCounter testRepeatCounter = new RepeatCounter();
       Assert.AreEqual(0, testRepeatCounter.Count("This is a test! to test the test method is working", "test"));
     }
+
+    [TestMethod]
+    public void CountWordNotFullyMatchingCase()
+    {
+      RepeatCounter testRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(0, testRepeatCounter.Count("I am going to the cathedral", "cat"));
+    }
   }
 }
