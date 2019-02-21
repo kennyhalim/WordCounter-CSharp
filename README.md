@@ -22,7 +22,16 @@ _A program that counts how many times a word occurs in a sentence. The Program w
 
 ## Setup/Installation Requirements
 
-mcs Program.cs Models/RepeatCounter.cs , mono Program.exe
+Requirements Software
+
+Download .NET Core 1.1.4 SDK and .NET Core Runtime 1.1.2 and install them.
+Download Mono and install it.
+
+1.)Clone this repository: $ git clone https://github.com/kennyhalim/WordCounter.Solution
+2.)Change into the work directory:: $ cd WordCounter.Solution
+3.)To edit the project, open the project in your preferred text editor.
+
+To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
 ## Technologies Used
 

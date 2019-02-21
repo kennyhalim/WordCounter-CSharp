@@ -122,7 +122,7 @@ namespace WordCounter.Tests
     public void CountLowerCaseSentenceAndUpperCaseWord()
     {
       RepeatCounter testRepeatCounter = new RepeatCounter();
-      Assert.AreEqual(0, testRepeatCounter.Count("I am going to eat some bananas", "Bananas"));
+      Assert.AreEqual(1, testRepeatCounter.Count("I am going to eat some bananas", "Bananas"));
     }
   }
 }
