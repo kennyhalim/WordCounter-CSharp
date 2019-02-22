@@ -5,18 +5,6 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
-    private string _sentence;
-    private string _word;
-    private static List<RepeatCounter> _List = new List<RepeatCounter> {};
-    private int _id;
-
-    public RepeatCounter (string sentence, string word)
-    {
-      _sentence = sentence;
-      _word = word;
-      _List.Add(this);
-      _id = _List.Count;
-    }
     public bool IsAlphabetical(string sentence, string word)
     {
       if(string.IsNullOrEmpty(sentence) || string.IsNullOrEmpty(word)){
