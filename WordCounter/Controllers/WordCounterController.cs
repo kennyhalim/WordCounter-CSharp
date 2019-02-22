@@ -19,11 +19,11 @@ namespace WordCounter.Controllers
       return View();
     }
 
-  //   [HttpPost("/wordcounter")]
-  //   public ActionResult Create(string sentence, string word)
-  //   {
-  //     RepeatCounter newSentenceWord = new RepeatCounter();
-  //     return RedirectToAction("Index");
-  //   }
+    [HttpPost("/wordcounter")]
+    public ActionResult Create(string sentence, string word)
+    {
+      RepeatCounter newSentenceWord = new RepeatCounter(sentence, word);
+      return View("Index", newSentenceWord);
+    }
   }
 }

@@ -1,1 +1,19 @@
+@using WordCounter;
 
+<h1>WordCounter</h1>
+<ul>
+
+@if (Model.isEmpty() == true)
+{
+  <p>You have not inputted any sentences yet!</p>
+}
+@if(Model.isEmpty() == false)
+{
+
+  <li>@Model.GetSentence()</li>
+  <li>@Model.GetWord()</li>
+  <li>@Model.Count()</li>
+}
+
+</ul>
+<a href="/wordcounter/new">Make a new sentence!</a>

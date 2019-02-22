@@ -48,6 +48,14 @@ namespace WordCounter
      return _id;
     }
 
+    public bool isEmpty()
+    {
+      if (string.IsNullOrEmpty(_sentence) && string.IsNullOrEmpty(_word)){
+        return true;
+      }
+      return false;
+    }
+
     public bool IsAlphabetical(string sentence, string word)
     {
       if(string.IsNullOrEmpty(_sentence) || string.IsNullOrEmpty(_word)){
