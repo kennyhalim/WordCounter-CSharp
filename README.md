@@ -6,7 +6,7 @@
 
 ## Description
 
-_Epicodus Week 6 Individual Project_
+_Epicodus Week 6 & 7 Individual Project_
 
 _A program that counts how many times a word occurs in a sentence. The Program will also only allows the user to input alphabets, numbers and spaces (No punctuation is allowed)._
 
@@ -33,6 +33,9 @@ Download Mono and install it.
 
 To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
+To run the program on chrome, use these commands: $ cd WordCounter $ dotnet build $ dotnet run
+
+
 ## Technologies Used
 
 _Atom, C#, .NET_
@@ -41,4 +44,4 @@ _Atom, C#, .NET_
 
 *MIT License*
 
-Copyright (c) 2017 **_Kenny Halim_**
+Copyright (c) 2019 **_Kenny Halim_**

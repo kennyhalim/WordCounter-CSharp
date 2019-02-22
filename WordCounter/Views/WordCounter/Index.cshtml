@@ -10,9 +10,9 @@
 @if(Model.isEmpty() == false)
 {
 
-  <li>@Model.GetSentence()</li>
-  <li>@Model.GetWord()</li>
-  <li>@Model.Count()</li>
+  <p>Your Inputted Sentence: <strong>@Model.GetSentence() </strong></p>
+  <p>Your Inputted Word: <strong>@Model.GetWord() </strong></p>
+  <p>Number of Occurences: <strong>@Model.Count() </strong></p>
 }
 
 </ul>
